@@ -9,16 +9,12 @@ echo '<button type="submit">Post</button><button type="reset">Clear the form</bu
 echo '</form>';
 
 
-//connecting to database
-$connection = mysql_connect('localhost', 'admin', 'admin') or die ("Connection failed");
-$db_selected = mysql_select_db('cms', $connection) or die ("Failed to select database");
-
 $topicIn = $_POST['topic'];
 $textIn = $_POST['text'];
 $postDate = date('d.m.Y');
 
 if (isset($_POST['posted'])){
-    $messageAdded = mysql_query("INSERT INTO news (topic, text, post_date) VALUES ('$topicIn', '$textIn',
+    $messageAdded = $db->query("INSERT INTO news (topic, text, post_date) VALUES ('$topicIn', '$textIn',
 '$postDate')") or die ("Failed to post the message");
     if ($messageAdded){
         echo 'The message was posted successfully';

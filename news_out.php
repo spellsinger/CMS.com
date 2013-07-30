@@ -18,10 +18,6 @@ function linkBar($page, $pagesCount){
     return true;
 } //end of function
 
-//connection to database
-$connection = mysql_connect('localhost', 'admin', 'admin') or die ("Connection failed");
-$db_selected = mysql_select_db('cms', $connection) or die ("Failed ti select database");
-
 
 //prepare
 $perPage = 3; //number of news per page
@@ -34,7 +30,10 @@ else {
 }
 
 //whole amount of info
-$count = mysql_num_rows(mysql_query("SELECT * FROM news WHERE visibility != 0")) or die ("Error! There are no posts in the database");
+$count = $db->numRows("SELECT * FROM news WHERE `visibility` != 0");
+if ($count == 0) {
+    die ("Error! There are no posts in the database");
+}
 $pagesCount = ceil($count / $perPage); //number of pages
 
 //if the number of the page is bigger than the number of pages
@@ -48,8 +47,9 @@ $startPosition = ($page - 1) * $perPage; //initial position
 linkBar($page, $pagesCount);
 
 //get the info out of database
-$result = mysql_query("SELECT * FROM news LIMIT ".$startPosition.", ".$perPage) or die ("Error!");
-while ($row = mysql_fetch_array($result)){
+$result = $db->getAllRows("SELECT * FROM news LIMIT ".$startPosition.", ".$perPage) or die ("Error!");
+#while ($row = mysql_fetch_array($result)){
+foreach ($result as $row) {
     $id = $row['id'];
     echo '<h1>'.$row['topic'].'</h1><p>'.$row['text'].'<br />'.$row['post_date'].'</p>';
 
@@ -57,7 +57,7 @@ while ($row = mysql_fetch_array($result)){
     ">Hide</button>';
     if (isset($_GET['hideId'])){
         $hideId = $_GET['hideId'];
-        mysql_query("UPDATE news SET visibility=0 WHERE id=".$hideId) or die ("Failed to hide the post, reason: ".mysql_error()); //<--- by using this we can assume a reason of failed query
+        $db->query("UPDATE news SET visibility=0 WHERE id=".$hideId) or die ("Failed to hide the post, reason: ".mysql_error()); //<--- by using this we can assume a reason of failed query
         echo '<script type="text/javascript">
             window.location.href="'.$_SERVER['php_self'].'?action=get&page='.$page.'";
             </script>';
@@ -67,7 +67,7 @@ while ($row = mysql_fetch_array($result)){
     ">Delete</button>';
     if (isset($_GET['delId'])){
         $delId = $_GET['delId'];
-        mysql_query("DELETE FROM news WHERE id=".$delId) or die ("Failed to delete the post");
+        $db->query("DELETE FROM news WHERE id=".$delId) or die ("Failed to delete the post");
         echo '<script type="text/javascript">
             window.location.href="'.$_SERVER['php_self'].'?action=get&page='.$page.'";
             </script>';
