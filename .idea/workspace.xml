@@ -5,8 +5,9 @@
     <ignored path="CMS.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.php" changelist="dfbe3f30-8b86-4c06-9d30-194fa854c3bd" time="1375087863908" ignored="false" />
-    <file path="/news_out.php" changelist="dfbe3f30-8b86-4c06-9d30-194fa854c3bd" time="1375214822646" ignored="false" />
+    <file path="/news_out.php" changelist="dfbe3f30-8b86-4c06-9d30-194fa854c3bd" time="1375215679558" ignored="false" />
     <file path="/actions.php" changelist="dfbe3f30-8b86-4c06-9d30-194fa854c3bd" time="1375188589858" ignored="false" />
+    <file path="/news_in.php" changelist="dfbe3f30-8b86-4c06-9d30-194fa854c3bd" time="1375215710029" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="51" selection-start="57" selection-end="57" vertical-scroll-proportion="0.029668411">
+            <state line="1" column="51" selection-start="57" selection-end="57" vertical-scroll-proportion="-0.65384614">
               <folding>
                 <marker date="1375215148913" expanded="true" signature="70:405" placeholder="..." />
                 <marker date="1375215148913" expanded="true" signature="70:220" placeholder="..." />
@@ -43,18 +44,18 @@
       <file leaf-file-name="news_in.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news_in.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="792" selection-end="792" vertical-scroll-proportion="-7.730769">
+            <state line="21" column="75" selection-start="1032" selection-end="1032" vertical-scroll-proportion="-11.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news_out.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="news_out.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/news_out.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="104" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-7.730769">
+            <state line="18" column="19" selection-start="593" selection-end="593" vertical-scroll-proportion="0.2582897">
               <folding>
-                <marker date="1375214864390" expanded="true" signature="2631:2666" placeholder="..." />
+                <marker date="1375215684196" expanded="true" signature="2670:2705" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -70,10 +71,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/news_in.php" />
         <option value="$PROJECT_DIR$/actions.php" />
-        <option value="$PROJECT_DIR$/news_out.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/news_out.php" />
+        <option value="$PROJECT_DIR$/news_in.php" />
       </list>
     </option>
   </component>
@@ -269,7 +270,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="2" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1375214864390" expanded="true" signature="2631:2666" placeholder="..." />
+            <marker date="1375215684196" expanded="true" signature="2670:2705" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -288,28 +289,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/news_in.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="792" selection-end="792" vertical-scroll-proportion="-7.730769">
+        <state line="21" column="75" selection-start="1032" selection-end="1032" vertical-scroll-proportion="-11.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/news_out.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="104" selection-start="2028" selection-end="2028" vertical-scroll-proportion="-7.730769">
-          <folding>
-            <marker date="1375214864390" expanded="true" signature="2631:2666" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="51" selection-start="57" selection-end="57" vertical-scroll-proportion="0.029668411">
+        <state line="1" column="51" selection-start="57" selection-end="57" vertical-scroll-proportion="-0.65384614">
           <folding>
             <marker date="1375215148913" expanded="true" signature="70:405" placeholder="..." />
             <marker date="1375215148913" expanded="true" signature="70:220" placeholder="..." />
             <marker date="1375215148913" expanded="true" signature="85:205" placeholder="..." />
             <marker date="1375215148913" expanded="true" signature="220:405" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news_out.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="19" selection-start="593" selection-end="593" vertical-scroll-proportion="0.2582897">
+          <folding>
+            <marker date="1375215684196" expanded="true" signature="2670:2705" placeholder="..." />
           </folding>
         </state>
       </provider>
