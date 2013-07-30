@@ -48,7 +48,7 @@ $startPosition = ($page - 1) * $perPage; //initial position
 linkBar($page, $pagesCount);
 
 //get the info out of database
-$result = mysql_query("SELECT * FROM news LIMIT ".$startPosition.", ".$perPage) or die ("Error!");
+$result = mysql_query("SELECT * FROM news LIMIT ".$startPosition.", ".$perPage) or die ("Error! ".mysql_error());
 while ($row = mysql_fetch_array($result)){
     $id = $row['id'];
     echo '<h1>'.$row['topic'].'</h1><p>'.$row['text'].'<br />'.$row['post_date'].'</p>';
@@ -67,7 +67,7 @@ while ($row = mysql_fetch_array($result)){
     ">Delete</button>';
     if (isset($_GET['delId'])){
         $delId = $_GET['delId'];
-        mysql_query("DELETE FROM news WHERE id=".$delId) or die ("Failed to delete the post");
+        mysql_query("DELETE FROM news WHERE id=".$delId) or die ("Failed to delete the post, reason: ".mysql_error());
         echo '<script type="text/javascript">
             window.location.href="'.$_SERVER['php_self'].'?action=get&page='.$page.'";
             </script>';

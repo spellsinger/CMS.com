@@ -19,7 +19,7 @@ $postDate = date('d.m.Y');
 
 if (isset($_POST['posted'])){
     $messageAdded = mysql_query("INSERT INTO news (topic, text, post_date) VALUES ('$topicIn', '$textIn',
-'$postDate')") or die ("Failed to post the message");
+'$postDate')") or die ("Failed to post the message, reason: ".mysql_error());
     if ($messageAdded){
         echo 'The message was posted successfully';
     }
