@@ -1,6 +1,7 @@
 <?php
 
 //database driver
+// chto eto blyad' takoe??
 
 class DB {
 	

@@ -1,6 +1,6 @@
 <?php
 
-//config
+//config o_________O
 
 $config = array (
 	'db' => array (

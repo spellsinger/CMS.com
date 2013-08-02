@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 date_default_timezone_set('Europe/Kiev');
 require_once('config.php');
@@ -24,6 +24,8 @@ echo '<body>';
 
 echo '<p><a href="'.$_SERVER['php_self'].'?action=post">I want to post the news</a></p>';
 echo '<p><a href="'.$_SERVER['php_self'].'?action=get">I want to read the news</a></p>';
+echo '<p><a href="registration.php">Register</a></p>';
+echo '<p><a href="authorisation.php">Enter</a></p>';
 
 $action = $_GET['action'];
 
@@ -31,6 +33,7 @@ switch ($action) {
 	case 'post':
 		include 'news_in.php';
 	case 'get':
+        include 'news_out.php';
 	default:
 		include 'news_out.php';
 }
